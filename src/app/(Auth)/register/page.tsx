@@ -22,10 +22,9 @@ export default async function RegisterPage() {
 
             if (!response.ok) throw new Error("Registration failed");
             console.log("Register Success");
-            window.location.href = '/login';
         } catch (err) {
             console.log(err);
-        } 
+        }
     }
 
     return (
