@@ -17,7 +17,13 @@ interface HotelItem {
 interface RoomItem {
     _id: string,
     roomNo: string,
-    hotel: string,
+    hotel: {
+        _id: string,
+        name: string,
+        province: string,
+        tel: string,
+        id: string
+    },
     roomType: string,
     price: string,
     picture: string,
@@ -32,8 +38,18 @@ interface BookingItem {
     bookingDate: string,
     bookingEnd: string,
     user: string,
-    hotel: string,
-    room: string,
+    hotel: {
+        _id: string,
+        name: string,
+        province: string,
+        tel: string,
+        id: string
+    }
+    room: {
+        _id: string,
+        roomNo: string,
+        roomType: string
+    }
     createdAt: string,
     __v: string
 }
@@ -43,4 +59,16 @@ interface HotelJson {
     count: number,
     pagination: Object,
     data: HotelItem[]
+}
+
+interface RoomJson {
+    success: boolean,
+    count: number,
+    data: RoomItem[]
+}
+
+interface BookingJson {
+    success: boolean,
+    count: number,
+    data: BookingItem[]
 }
