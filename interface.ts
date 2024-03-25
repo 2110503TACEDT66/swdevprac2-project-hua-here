@@ -29,6 +29,9 @@ interface RoomItem {
     picture: string,
     __v: string
 }
+interface RoomJson{
+    data: RoomItem[]
+}
 
 interface BookingItem {
     _id: string,
