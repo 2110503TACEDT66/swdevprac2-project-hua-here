@@ -8,19 +8,19 @@ export default async function HotelDetailPage({params}:{params:{hid:string}}){
     const roomDetail = await getRoomForHotel(params.hid)
 
     return(
-        <main >
-            <div className="flex flex-row my-5">
-                <div><Image src={hotelDetail.data.picture}
+        <main>
+            <div className="text-white flex flex-row mt-5">
+                <div className="flex  mt-7 ml-40"><Image src={hotelDetail.data.picture}
                 alt="Hotel"
                 width={0}
                 height={0}
-                sizes="100vw"
-                className="rounded-lg w-[30%] text-sky-400" />
+                sizes="400vw"
+                className="rounded-lg w-80 h-40 text-sky-400" />
                 </div>
-                <div>
-                    <div className="text-medium mx-5 text-black text-left">{hotelDetail.data.name} </div>
-                    <div className="text-medium mx-5 text-black"> address : {hotelDetail.data.address}</div>
-                    <div className="text-medium mx-5 text-black"> tel : {hotelDetail.data.tel}</div>
+                <div className="mt-7 ml-10">
+                    <div className="text-bold text-white text-xl">{hotelDetail.data.name} </div>
+                    <div className="text-bold text-white text-xl"> address : {hotelDetail.data.address}</div>
+                    <div className="text-bold text-white text-xl"> tel : {hotelDetail.data.tel}</div>
                 </div>
             </div>
             <div className="flex flex-row">

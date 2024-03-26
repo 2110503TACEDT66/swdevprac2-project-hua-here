@@ -1,5 +1,5 @@
 export default async function updateBooking({token, bid, bDate, bEnd} : {token: string, bid: string, bDate: string, bEnd: string}) {
-    const response = await fetch(`http://localhost:5000/api/v1/bookings/${bid}`, {
+    const response = await fetch(`http://localhost:5001/api/v1/bookings/${bid}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
