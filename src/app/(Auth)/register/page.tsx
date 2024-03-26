@@ -1,3 +1,5 @@
+import { redirect } from "next/navigation";
+
 export default async function RegisterPage() {
     const RegisterUser = async (addRegisterForm: FormData) => {
         'use server'
@@ -25,6 +27,7 @@ export default async function RegisterPage() {
         } catch (err) {
             console.log(err);
         }
+        redirect('./')
     }
 
     return (
