@@ -8,7 +8,7 @@ export default async function HotelDetailPage({params}:{params:{hid:string}}){
     const roomDetail = await getRoomForHotel(params.hid)
 
     return(
-        <main>
+        <main className="bg-[url('/Images/bg.png')] bg-cover bg-center bg-no-repeat">
             <div className="text-white flex flex-row mt-5">
                 <div className="flex  mt-7 ml-40"><Image src={hotelDetail.data.picture}
                 alt="Hotel"
