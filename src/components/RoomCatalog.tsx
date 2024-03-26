@@ -1,8 +1,4 @@
-import Card from "./Card";
-import Link from "next/link";
 import RoomCard from "./RoomCard";
-
-
 
 export default async function RoomCatalog({roomJson}:{roomJson:Promise<RoomJson>}){
     const roomJsonReady = await roomJson

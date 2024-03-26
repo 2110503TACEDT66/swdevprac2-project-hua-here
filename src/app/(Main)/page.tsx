@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Banner from '@/components/Banner'
 import HotelCatalog from '@/components/HotelCatalog'
 import getHotels from '@/libs/getHotels'
@@ -7,7 +6,6 @@ import LinearProgress from '@mui/material/LinearProgress'
 
 export default function Home() {
   const hotel = getHotels()
-  console.log(hotel)
   return (
     <main>
       <Banner/>
