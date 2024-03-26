@@ -7,6 +7,7 @@ import LinearProgress from '@mui/material/LinearProgress'
 
 export default function Home() {
   const hotel = getHotels()
+  console.log(hotel)
   return (
     <main>
       <Banner/>
