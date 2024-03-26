@@ -16,7 +16,7 @@ export default function myBookingPage() {
     }, [])
 
     return (
-        <main>
+        <main className="bg-[url('/Images/bg.png')]  bg-cover bg-center bg-no-repeat h-screen">
             <BookingList />
         </main>
     )
