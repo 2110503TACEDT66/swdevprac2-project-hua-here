@@ -1,5 +1,5 @@
 export default async function addBooking(token:string ,bookingData:BookingData) {
-    const response = await fetch(`http://localhost:5000/api/v1/hotels/${bookingData.hid}/bookings`, {
+    const response = await fetch(`${process.env.BACKEND_URL}/api/v1/hotels/${bookingData.hid}/bookings`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

@@ -1,5 +1,5 @@
 export default async function addHotelDB(token:string ,hotelData:HotelData) {
-    const response = await fetch(`http://localhost:5000/api/v1/hotels`, {
+    const response = await fetch(`${process.env.BACKEND_URL}/api/v1/hotels`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
