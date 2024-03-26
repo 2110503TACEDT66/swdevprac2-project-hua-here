@@ -80,3 +80,10 @@ interface HotelData {
     region: FormDataEntryValue,
     picture: string
 }
+
+interface BookingData {
+    hid: string,
+    roomid: string,
+    bDate: string,
+    bEnd: string
+}

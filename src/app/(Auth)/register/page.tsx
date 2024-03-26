@@ -1,3 +1,5 @@
+import { redirect } from "next/navigation";
+
 export default async function RegisterPage() {
     const RegisterUser = async (addRegisterForm: FormData) => {
         'use server'
@@ -25,6 +27,7 @@ export default async function RegisterPage() {
         } catch (err) {
             console.log(err);
         }
+        redirect('./')
     }
 
     return (
@@ -37,7 +40,7 @@ export default async function RegisterPage() {
             </div>
             <div className="flex items-center w-1/2 my-2">
                 <label className="w-auto block text-gray-700 pr-4" htmlFor="tel">Telephone</label>
-                <input type="text" required id='tel' name="tel" placeholder="Enter your telephone number"
+                <input type="text" required id='tel' name="tel" placeholder="Enter your telephone number" min={8} max={10}
                 className="bg-white border-2 border-gray-200 rounded w-full p-2 text-gray-700 focus:outline-none focus:border-blue-400" />
             </div>
             <div className="flex items-center w-1/2 my-2">
@@ -47,7 +50,7 @@ export default async function RegisterPage() {
             </div>
             <div className="flex items-center w-1/2 my-2">
                 <label className="w-auto block text-gray-700 pr-4" htmlFor="password">Password</label>
-                <input type="password" required id='password' name="password" placeholder="Enter your password"
+                <input type="password" required id='password' name="password" placeholder="Enter your password" min={6}
                 className="bg-white border-2 border-gray-200 rounded w-full p-2 text-gray-700 focus:outline-none focus:border-blue-400" />
             </div>
             <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white p-2 rounded">Register</button>
