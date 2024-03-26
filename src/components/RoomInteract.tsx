@@ -1,7 +1,7 @@
 "use client"
 import React from "react"
 
-export default function RoomInteract({chlidren}:{chlidren:React.ReactNode}){
+export default function RoomInteract({children}:{children:React.ReactNode}){
     function onCardMouseAction(event:React.SyntheticEvent){
         if(event.type=='mouseover'){
             event.currentTarget.classList.remove('shadow-lg')
@@ -19,7 +19,7 @@ export default function RoomInteract({chlidren}:{chlidren:React.ReactNode}){
     return(<div className="w-full h-[300px] rounded-lg shadow-lg bg-black"
     onMouseOver={(e)=>onCardMouseAction(e)}
     onMouseOut={(e)=>onCardMouseAction(e)}>
-        {chlidren}
+        {children}
 
     </div>
     )
