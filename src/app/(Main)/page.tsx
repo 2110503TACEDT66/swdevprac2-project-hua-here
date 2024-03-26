@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Banner from '@/components/Banner'
 import HotelCatalog from '@/components/HotelCatalog'
 import getHotels from '@/libs/getHotels'

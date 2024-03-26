@@ -69,3 +69,14 @@ interface BookingJson {
     count: number,
     data: BookingItem[]
 }
+
+interface HotelData {
+    name: FormDataEntryValue,
+    address: FormDataEntryValue,
+    district: FormDataEntryValue,
+    province: FormDataEntryValue,
+    postalcode: FormDataEntryValue,
+    tel: FormDataEntryValue,
+    region: FormDataEntryValue,
+    picture: string
+}
