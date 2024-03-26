@@ -39,14 +39,14 @@ export default async function Profile() {
     }
 
     return (
-        <main className="fixed left-0 top-0 w-full h-full flex flex-col items-center justify-center bg-black bg-opacity-40">
-            <div className="bg-white rounded-lg p-8 w-[25em] text-black">
-                <div className="text-2xl">{profile.data.name}</div>
+        <main className="fixed left-0 top-0 w-full h-full flex flex-col items-center justify-center bg-black bg-opacity-40 bg-[url('/Images/bg.png')] bg-cover bg-center bg-no-repeat">
+            <div className="bg-white/30 backdrop-blur-md rounded-lg p-8 w-[25em] text-black">
+                <div className="text-3xl font-bold text-white">Name : {profile.data.name}</div>
                 <table className="table-auto border-seperate border-spacing-2">
-                    <tbody>
-                        <tr><td>Email</td><td>{profile.data.email}</td></tr>
-                        <tr><td>Tel.</td><td>{profile.data.tel}</td></tr>
-                        <tr><td>Role</td><td>{profile.data.role}</td></tr>
+                    <tbody className="font-normal text-2xl text-white">
+                        <tr><td>Email </td><td>: {profile.data.email}</td></tr>
+                        <tr><td>Tel. </td><td>: {profile.data.tel}</td></tr>
+                        <tr><td>Role </td><td>: {profile.data.role}</td></tr>
                     </tbody>
                 </table>
             </div>
